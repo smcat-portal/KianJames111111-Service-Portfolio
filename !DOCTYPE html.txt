@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>KianJames1111111 | Service Portfolio</title>
+    <meta name="description" content="KianJames1111111 personal portfolio and service record." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #e7f8dc;
+        --bg2: #d5f0ca;
+        --card: #fbfff9;
+        --card2: #edf9e8;
+        --green: #123f29;
+        --green2: #267a4a;
+        --mint: #b8e7ad;
+        --line: #afd5a4;
+        --text: #163725;
+        --muted: #607a68;
+        --white: #fff;
+        --shadow: 0 20px 55px rgba(18, 76, 45, 0.12);
+        --radius: 22px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.55;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button {
+        font: inherit;
+      }
+
+      .shell {
+        max-width: 1250px;
+        margin: auto;
+        padding: 0 22px;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(233, 249, 223, 0.88);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav {
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-family: "Space Grotesk";
+        font-weight: 700;
+        font-size: 19px;
+        color: var(--green);
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        background: var(--green);
+        color: #d9f6ce;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+      }
+
+      .links {
+        display: flex;
+        gap: 7px;
+      }
+
+      .links a {
+        padding: 10px 13px;
+        border-radius: 10px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--muted);
+      }
+
+      .links a:hover {
+        background: var(--card);
+        color: var(--green);
+      }
+
+      .nav-actions {
+        display: flex;
+        gap: 8px;
+      }
+
+      .icon-btn,
+      .admin {
+        border: 1px solid var(--line);
+        background: var(--card);
+        color: var(--green);
+        height: 40px;
+        border-radius: 12px;
+        cursor: pointer;
+      }
+
+      .icon-btn {
+        width: 40px;
+      }
+
+      .admin {
+        padding: 0 14px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .hero {
+        padding: 72px 0 34px;
+        position: relative;
+      }
+
+      .hero:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 25px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--line), transparent);
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 22px;
+      }
+
+      .hero-main {
+        position: relative;
+        overflow: hidden;
+        background: var(--green);
+        color: white;
+        border-radius: 30px;
+        padding: 48px;
+        min-height: 440px;
+        box-shadow: var(--shadow);
+      }
+
+      .hero-main:after {
+        content: "";
+        position: absolute;
+        width: 330px;
+        height: 330px;
+        border: 1px solid rgba(219, 255, 207, 0.25);
+        border-radius: 50%;
+        right: -100px;
+        bottom: -120px;
+        box-shadow: 0 0 0 35px rgba(219, 255, 207, 0.05), 0 0 0 70px rgba(219, 255, 207, 0.04);
+      }
+
+      .status {
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 999px;
+        padding: 8px 13px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .status i {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #9ff38d;
+      }
+
+      .hero h1 {
+        font-family: "Space Grotesk";
+        font-size: clamp(48px, 6vw, 78px);
+        line-height: 0.95;
+        letter-spacing: -0.055em;
+        margin: 30px 0 17px;
+        max-width: 800px;
+      }
+
+      .hero p {
+        max-width: 650px;
+        color: #d8f2d2;
+        font-size: 15px;
+      }
+
+      .hero-meta {
+        display: flex;
+        gap: 9px;
+        flex-wrap: wrap;
+        margin-top: 27px;
+      }
+
+      .pill {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 8px 12px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.08);
+        font-size: 11px;
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 30px;
+      }
+
+      .cta {
+        padding: 12px 17px;
+        border-radius: 11px;
+        background: #dff8d5;
+        color: var(--green);
+        font-weight: 800;
+        font-size: 12px;
+      }
+
+      .cta.alt {
+        background: transparent;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+      }
+
+      .hero-side {
+        display: grid;
+        gap: 22px;
+      }
+
+      .profile {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        padding: 26px;
+        box-shadow: var(--shadow);
+      }
+
+      .avatar {
+        height: 180px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        background: linear-gradient(135deg, #b9e9ae, #eaffdf);
+        display: grid;
+        place-items: center;
+        color: var(--green);
+        font-family: "Space Grotesk";
+        font-size: 54px;
+        font-weight: 800;
+      }
+
+      .avatar span {
+        position: absolute;
+        bottom: 14px;
+        right: 15px;
+        font-size: 9px;
+        letter-spacing: 0.18em;
+        opacity: 0.55;
+      }
+
+      .profile h2 {
+        font-family: "Space Grotesk";
+        margin: 20px 0 4px;
+        font-size: 25px;
+      }
+
+      .rank {
+        color: var(--green2);
+        font-weight: 800;
+        font-size: 13px;
+      }
+
+      .profile-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .mini {
+        padding: 12px;
+        background: var(--card2);
+        border: 1px solid var(--line);
+        border-radius: 13px;
+      }
+
+      .mini small {
+        display: block;
+        color: var(--muted);
+        font-size: 9px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .mini b {
+        font-size: 12px;
+      }
+
+      .quote {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        padding: 25px;
+        font-family: "Space Grotesk";
+        font-size: 18px;
+        font-weight: 600;
+        box-shadow: var(--shadow);
+      }
+
+      .section {
+        padding: 68px 0;
+        position: relative;
+      }
+
+      .section:nth-of-type(even) {
+        background: rgba(255, 255, 255, 0.18);
+      }
+
+      .section-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 22px;
+      }
+
+      .section-title h2 {
+        font-family: "Space Grotesk";
+        font-size: 34px;
+        letter-spacing: -0.035em;
+        color: var(--green);
+      }
+
+      .section-title span {
+        font-size: 11px;
+        color: var(--muted);
+        max-width: 420px;
+        text-align: right;
+      }
+
+      .grid {
+        display: grid;
+        gap: 14px;
+      }
+
+      .skills {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .tile {
+        background: linear-gradient(145deg, var(--card), var(--card2));
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 20px;
+        cursor: pointer;
+        transition: 0.18s;
+        box-shadow: 0 8px 24px rgba(18, 76, 45, 0.04);
+      }
+
+      .tile:hover {
+        transform: translateY(-5px);
+        border-color: var(--green2);
+        box-shadow: var(--shadow);
+      }
+
+      .tile-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .tile-icon {
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+        background: var(--bg2);
+        display: grid;
+        place-items: center;
+        color: var(--green);
+        font-weight: 800;
+      }
+
+      .tile .arrow {
+        font-size: 16px;
+        color: var(--green2);
+      }
+
+      .tile h3 {
+        font-family: "Space Grotesk";
+        font-size: 16px;
+        margin: 20px 0 7px;
+        color: var(--green);
+      }
+
+      .tile p {
+        font-size: 11px;
+        color: var(--muted);
+      }
+
+      .stat-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+        margin-top: 14px;
+      }
+
+      .stat {
+        background: var(--green);
+        color: white;
+        border-radius: 18px;
+        padding: 22px;
+      }
+
+      .stat b {
+        display: block;
+        font-family: "Space Grotesk";
+        font-size: 30px;
+      }
+
+      .stat span {
+        font-size: 10px;
+        color: #ccebc5;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .work {
+        background: linear-gradient(145deg, var(--card), var(--card2));
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 23px;
+        cursor: pointer;
+        transition: 0.18s;
+      }
+
+      .work:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow);
+      }
+
+      .work-label {
+        font-size: 10px;
+        font-weight: 800;
+        color: var(--green2);
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+
+      .work h3 {
+        font-family: "Space Grotesk";
+        font-size: 20px;
+        margin: 9px 0;
+      }
+
+      .work p {
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .work .date {
+        margin-top: 17px;
+        display: inline-block;
+        background: var(--bg2);
+        padding: 7px 10px;
+        border-radius: 9px;
+        font-size: 9px;
+        font-weight: 700;
+        color: var(--green);
+      }
+
+      .awards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .award {
+        min-height: 125px;
+      }
+
+      .award .medal {
+        font-size: 22px;
+      }
+
+      .award h3 {
+        font-size: 14px;
+        margin: 12px 0 3px;
+      }
+
+      .award p {
+        font-size: 10px;
+        color: var(--muted);
+      }
+
+      .lead-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 14px;
+      }
+
+      .lead-card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 28px;
+      }
+
+      .lead-card p {
+        font-size: 13px;
+        color: var(--muted);
+        margin-bottom: 14px;
+      }
+
+      .principles {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .principle {
+        padding: 16px;
+        border-radius: 14px;
+        background: var(--bg2);
+        border: 1px solid var(--line);
+      }
+
+      .principle b {
+        display: block;
+        color: var(--green);
+        font-size: 13px;
+      }
+
+      .principle span {
+        font-size: 10px;
+        color: var(--muted);
+      }
+
+      .gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .gallery .photo {
+        height: 190px;
+        border-radius: 20px;
+        border: 1px solid var(--line);
+        background: linear-gradient(145deg, #c7edbd, #effbe9);
+        display: grid;
+        place-items: center;
+        color: var(--green);
+        font-family: "Space Grotesk";
+        font-size: 12px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.18s;
+      }
+
+      .gallery .photo:hover {
+        transform: scale(0.985);
+        box-shadow: var(--shadow);
+      }
+
+      footer {
+        margin-top: 25px;
+        padding: 35px 0;
+        border-top: 1px solid var(--line);
+        background: var(--bg2);
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .footer b {
+        font-family: "Space Grotesk";
+      }
+
+      .footer span {
+        font-size: 11px;
+        color: var(--muted);
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .modal.open {
+        display: flex;
+      }
+
+      .backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(8, 40, 24, 0.58);
+        backdrop-filter: blur(8px);
+      }
+
+      .modal-box {
+        position: relative;
+        width: min(650px, 100%);
+        max-height: 85vh;
+        overflow: auto;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 30px;
+        box-shadow: 0 30px 100px rgba(0, 0, 0, 0.25);
+        animation: pop 0.18s ease;
+      }
+
+      .close {
+        position: absolute;
+        right: 16px;
+        top: 14px;
+        border: 0;
+        background: var(--bg2);
+        color: var(--green);
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 20px;
+      }
+
+      .modal-tag {
+        font-size: 10px;
+        color: var(--green2);
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .modal-box h2 {
+        font-family: "Space Grotesk";
+        font-size: 30px;
+        color: var(--green);
+        margin: 8px 0 10px;
+      }
+
+      .modal-box p {
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .modal-extra {
+        margin-top: 18px;
+        padding: 16px;
+        border-radius: 14px;
+        background: var(--bg2);
+        font-size: 12px;
+        color: var(--text);
+      }
+
+      .progress {
+        height: 7px;
+        background: #cfe7c8;
+        border-radius: 999px;
+        margin-top: 8px;
+        overflow: hidden;
+      }
+
+      .progress i {
+        display: block;
+        height: 100%;
+        background: var(--green2);
+        border-radius: 999px;
+      }
+
+      .admin-tabs {
+        display: flex;
+        gap: 6px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 10px;
+        flex-wrap: wrap;
+      }
+
+      .admin-tab {
+        padding: 6px 10px;
+        border-radius: 8px;
+        background: var(--bg2);
+        border: 1px solid var(--line);
+        font-size: 11px;
+        font-weight: 700;
+        cursor: pointer;
+        color: var(--text);
+      }
+
+      .admin-tab.active {
+        background: var(--green);
+        color: #fff;
+        border-color: var(--green);
+      }
+
+      .admin-form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .admin-form label {
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--green);
+      }
+
+      .admin-form input,
+      .admin-form select,
+      .admin-form textarea {
+        width: 100%;
+        padding: 8px;
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        background: var(--card2);
+        color: var(--text);
+        font: inherit;
+        font-size: 12px;
+      }
+
+      .admin-form button {
+        padding: 10px;
+        border-radius: 10px;
+        background: var(--green);
+        color: #fff;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        margin-top: 5px;
+      }
+
+      .item-list-edit {
+        max-height: 160px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 10px;
+      }
+
+      .item-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 10px;
+        background: var(--bg2);
+        border-radius: 8px;
+        font-size: 11px;
+      }
+
+      .del-btn {
+        background: #e74c3c;
+        color: #fff;
+        border: none;
+        padding: 4px 8px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 10px;
+        font-weight: 700;
+      }
+
+      @keyframes pop {
+        from {
+          opacity: 0;
+          transform: translateY(8px) scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      .dark {
+        --bg: #0e2116;
+        --bg2: #132d1d;
+        --card: #173822;
+        --card2: #1b4127;
+        --green: #c8f2be;
+        --green2: #8edb83;
+        --mint: #294f35;
+        --line: #2d5940;
+        --text: #e3f4df;
+        --muted: #aac0ae;
+      }
+
+      .dark header {
+        background: rgba(14, 33, 22, 0.88);
+      }
+
+      .dark .hero-main {
+        background: #183f27;
+      }
+
+      .dark .status,
+      .dark .pill {
+        border-color: #356347;
+      }
+
+      .dark .cta {
+        background: #c8f2be;
+        color: #153b23;
+      }
+
+      @media (max-width: 950px) {
+        .links {
+          display: none;
+        }
+
+        .hero-grid,
+        .lead-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .skills {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .awards {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .gallery {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .shell {
+          padding: 0 15px;
+        }
+
+        .hero-main {
+          padding: 30px;
+          border-radius: 22px;
+        }
+
+        .hero h1 {
+          font-size: 47px;
+        }
+
+        .profile {
+          border-radius: 22px;
+        }
+
+        .skills,
+        .work-grid,
+        .awards,
+        .gallery,
+        .stat-row {
+          grid-template-columns: 1fr;
+        }
+
+        .section {
+          padding: 45px 0;
+        }
+
+        .section-title {
+          display: block;
+        }
+
+        .section-title span {
+          text-align: left;
+          display: block;
+          margin-top: 5px;
+        }
+
+        .footer {
+          display: block;
+        }
+
+        .footer span {
+          display: block;
+          margin-top: 6px;
+        }
+
+        .nav-actions .admin {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="shell nav">
+        <a class="brand" href="#home">
+          <span class="brand-mark" id="brandMark">KJ</span>
+          <span id="brandName">KianJames1111111</span>
+        </a>
+        <nav class="links">
+          <a href="#home">Home</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#awards">Awards</a>
+          <a href="#leadership">Leadership</a>
+          <a href="#gallery">Gallery</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-btn" id="theme" aria-label="Toggle theme">☾</button>
+          <button class="admin" id="adminBtn">🔒 Admin</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <div class="shell hero">
+        <div class="hero-grid">
+          <section class="hero-main">
+            <span class="status"><i></i> Portfolio & Service Record</span>
+            <h1 id="heroTitle">KianJames1111111</h1>
+            <p id="heroDesc">Community Leader • Roblox Game Developer • Discord Bot Developer</p>
+            <div class="hero-meta">
+              <span class="pill" id="pillCountry">Filipino</span>
+              <span class="pill">Filipino / English</span>
+              <span class="pill" id="pillAge">Age 15</span>
+              <span class="pill">Roblox Developer</span>
+            </div>
+            <div class="hero-actions">
+              <a class="cta" href="https://www.roblox.com/users/3543143586/profile" target="_blank" rel="noopener">View Roblox Profile ↗</a>
+              <a class="cta alt" href="#experience">Explore Record ↓</a>
+            </div>
+          </section>
+
+          <aside class="hero-side">
+            <div class="profile">
+              <div class="avatar" id="avatarBox">KJ</div>
+              <h2 id="profileName">KianJames1111111</h2>
+              <div class="profile-grid">
+                <div class="mini">
+                  <small>Country</small>
+                  <b id="miniCountry">Filipino</b>
+                </div>
+                <div class="mini">
+                  <small>Age</small>
+                  <b id="miniAge">15</b>
+                </div>
+                <div class="mini">
+                  <small>Focus</small>
+                  <b>Development</b>
+                </div>
+                <div class="mini">
+                  <small>Strength</small>
+                  <b>Leadership</b>
+                </div>
+              </div>
+            </div>
+            <div class="quote" id="quoteBox">“Build systems, serve the team, keep learning.”</div>
+          </aside>
+        </div>
+      </div>
+
+      <section class="section" id="skills">
+        <div class="shell">
+          <div class="section-title">
+            <h2>Capabilities</h2>
+            <span>Tap a capability to open its full profile and proficiency.</span>
+          </div>
+          <div class="grid skills" id="skillGrid"></div>
+          <div class="stat-row">
+            <div class="stat">
+              <b>15+</b>
+              <span>Core skills</span>
+            </div>
+            <div class="stat">
+              <b>6+</b>
+              <span>Communities served</span>
+            </div>
+            <div class="stat">
+              <b>2+</b>
+              <span>Development areas</span>
+            </div>
+            <div class="stat">
+              <b>100%</b>
+              <span>Team mindset</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="shell">
+          <div class="section-title">
+            <h2>Selected Projects</h2>
+            <span>Independent work and systems built around community operations.</span>
+          </div>
+          <div class="grid work-grid" id="projectGrid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="shell">
+          <div class="section-title">
+            <h2>Experience</h2>
+            <span>A clickable service timeline covering military roleplay, administration and development.</span>
+          </div>
+          <div class="grid work-grid" id="experienceGrid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="awards">
+        <div class="shell">
+          <div class="section-title">
+            <h2>Awards & Milestones</h2>
+            <span>Recognition collected across academy, command and service activities.</span>
+          </div>
+          <div class="grid awards" id="awardGrid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="leadership">
+        <div class="shell">
+          <div class="section-title">
+            <h2>Leadership Standard</h2>
+            <span>A personal approach centered on empathy, cooperation and constant learning.</span>
+          </div>
+          <div class="lead-grid">
+            <div class="lead-card">
+              <p>
+                The way I lead is founded on empathy, cooperation, and constant learning. I believe mixed groups can create a stronger atmosphere when everyone works toward one objective. I aim to earn trust, build firm relationships, listen carefully, and support people through difficult situations.
+              </p>
+              <p>
+                Maturity means making responsible choices, managing challenging situations, honoring commitments, recognizing weaknesses, asking for guidance when needed, respecting different opinions and staying calm under pressure.
+              </p>
+            </div>
+            <div class="lead-card">
+              <div class="principles">
+                <div class="principle">
+                  <b>Empathy</b>
+                  <span>Understand people before directing them.</span>
+                </div>
+                <div class="principle">
+                  <b>Teamwork</b>
+                  <span>Turn different strengths into one unit.</span>
+                </div>
+                <div class="principle">
+                  <b>Discipline</b>
+                  <span>Keep commitments and standards consistent.</span>
+                </div>
+                <div class="principle">
+                  <b>Growth</b>
+                  <span>Learn from mistakes and improve continuously.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="gallery">
+        <div class="shell">
+          <div class="section-title">
+            <h2>Gallery</h2>
+            <span>Place your own screenshots, certificates and project images here.</span>
+          </div>
+          <div class="grid gallery">
+            <div class="photo" data-title="Profile Showcase" data-text="A space for a Roblox profile or character screenshot.">IMAGE 01</div>
+            <div class="photo" data-title="Community" data-text="A space for a community, event or team screenshot.">IMAGE 02</div>
+            <div class="photo" data-title="Development" data-text="A space for a Roblox Studio or Discord development screenshot.">IMAGE 03</div>
+            <div class="photo" data-title="Service" data-text="A space for a service record or ceremony screenshot.">IMAGE 04</div>
+            <div class="photo" data-title="Academy" data-text="A space for academy or training screenshots.">IMAGE 05</div>
+            <div class="photo" data-title="Achievement" data-text="A space for certificates, medals or achievement screenshots.">IMAGE 06</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="shell footer">
+        <b id="footerName">KianJames1111111</b>
+        <span>Personal portfolio • Built as an original design • © 2026</span>
+      </div>
+    </footer>
+
+    <div class="modal" id="modal">
+      <div class="backdrop" id="backdrop"></div>
+      <div class="modal-box">
+        <button class="close" id="close">×</button>
+        <div class="modal-tag" id="mTag">DETAIL</div>
+        <h2 id="mTitle"></h2>
+        <p id="mText"></p>
+        <div class="modal-extra" id="mExtra"></div>
+      </div>
+    </div>
+
+    <script>
+      const ADMIN_PASSWORD = "kian123";
+
+      let profileData = {
+        name: "KianJames1111111",
+        title: "Community Leader • Roblox Game Developer • Discord Bot Developer",
+        country: "Filipino",
+        age: "15",
+        quote: "“Build systems, serve the team, keep learning.”"
+      };
+
+      async function loadSavedData() {
+        try {
+          const response = await fetch('/api/data');
+          if (!response.ok) {
+            throw new Error('Could not load server data');
+          }
+          const saved = await response.json();
+          if (!saved) return false;
+
+          if (saved.profileData) profileData = { ...profileData, ...saved.profileData };
+          if (Array.isArray(saved.skills)) skills = saved.skills;
+          if (Array.isArray(saved.projects)) projects = saved.projects;
+          if (Array.isArray(saved.experience)) experience = saved.experience;
+          if (Array.isArray(saved.awards)) awards = saved.awards;
+          return true;
+        } catch (error) {
+          console.warn('Failed to load saved portfolio data from server:', error);
+          return false;
+        }
+      }
+
+      async function persistData() {
+        const payload = {
+          profileData,
+          skills,
+          projects,
+          experience,
+          awards
+        };
+
+        const response = await fetch('/api/data', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to save portfolio data to server');
+        }
+      }
+
+      let skills = [
+        ["Discord Bot Development", "Building custom Discord bots for recruitment, operations, tickets, registration, moderation and community automation.", 94, "⌘"],
+        ["Logistics Management", "Organizing operational tasks, records, resources and team workflows.", 90, "▦"],
+        ["Discord Server Setup", "Designing channels, roles, permissions and structured community spaces.", 91, "◉"],
+        ["Teamwork & Collaboration", "Working with different people toward shared objectives and reliable results.", 95, "＋"],
+        ["Documentation", "Creating organized docs, databases, Trello boards and information pages.", 89, "▤"],
+        ["Roblox Game Development", "Developing Roblox systems, gameplay features and community-focused tools.", 92, "◆"],
+        ["Problem Solving", "Breaking complex tasks into workable solutions and testing improvements.", 93, "◇"],
+        ["Active Listening", "Understanding instructions, feedback and concerns before responding.", 91, "◌"],
+        ["Communication", "Sharing information clearly with teammates and community members.", 86, "↗"],
+        ["Interpersonal Skills", "Building respectful working relationships across different groups.", 88, "◎"],
+        ["Leadership", "Guiding teams while balancing standards, support and accountability.", 90, "★"],
+        ["Management", "Coordinating people, tasks and operational responsibilities.", 89, "▣"],
+        ["Professionalism", "Maintaining a strong work ethic, responsibility and professional conduct.", 93, "◆"],
+        ["Oral & Written Communication", "Preparing and delivering information in written and spoken form.", 83, "✎"]
+      ];
+
+      let projects = [
+        ["Discord Development", "Personal Discord Bot", "A custom bot project focused on recruitment and operations workflows.", "Automation • Tickets • Registration • Moderation"],
+        ["Roblox Development", "Military Roleplay Systems", "Roblox systems covering ranks, teams, overhead displays, doors, tools, academies and administration.", "Groups • Teams • UI • Gameplay"],
+        ["Operations", "Logistics & Administration", "Structured work involving records, academy administration, registrar duties and program coordination.", "Records • Planning • Coordination"],
+        ["Portfolio Design", "Personal Service Website", "This portfolio is designed as an original green-themed service record with clickable detail panels.", "HTML • CSS • JavaScript"]
+      ];
+
+      let experience = [
+        ["MAY 10, 2024 — PRESENT", "The Filipino Army (FA)", "Highest Rank: Major General. Service includes LSI command, Brigade Sergeant Major, TCO, Infantry Sergeant Major, OVR Logistics, Academy Director, AAGS/LMD-MTS High Command and other leadership assignments. PMA Graduate and JTC Graduate."],
+        ["JUN 06, 2024", "The Philippines National Police (TPNP)", "Highest Rank: Police Colonel. Department of Foreign Affairs Ambassador, former HQ Support Service and Security Commander responsibilities."],
+        ["JUN 05, 2024", "British Army Roleplay Academy (BA)", "Highest Rank: Sergeant. Former Royal Military Police service as Provost Officer 2."],
+        ["JUL 20, 2024", "British Army (BA)", "Highest Rank: Officer Cadet. Former Education and Training Service Directing Staff."],
+        ["SEP 29, 2024", "Project Philippines National Police RP", "Highest Rank: DCOA. Highway Patrol Group and Training Service Director of Administration assignments."],
+        ["JUN 20, 2025", "Philippines Navy", "Highest Rank: Commander [05]. Former Game Developer and Security Forces / Liaison Commander."],
+        ["PROGRAM", "Driving Course Program", "Driving Course Director with experience supporting structured driving-course administration and program operations."],
+        ["OTAG", "Office of the Adjutant General", "Former OTAG Staff, Senior Registrar in ID Management Department and Head of the ID Management Department."]
+      ];
+
+      let awards = [
+        ["🏅", "Meritorious Achievement Medal", "The Filipino Army"],
+        ["🎖️", "Military Commendation Medal", "The Filipino Army / Academy"],
+        ["🏆", "Presidential Unit Citation", "The Filipino Army"],
+        ["🛡️", "Vietnam Service", "The Filipino Army"],
+        ["⭐", "Commitment to Excellence Award", "Luna Sharpshooter Infantry"],
+        ["⭐", "Distinguished Service Award", "Luna Sharpshooter Infantry"],
+        ["🎖️", "Good Conduct Medal", "Luna Sharpshooter Infantry"],
+        ["🏅", "Medal of Merit", "Luna Sharpshooter Infantry"],
+        ["🏅", "Medal of Dedication", "Luna Sharpshooter Infantry"],
+        ["🏅", "Medal of Contribution", "Luna Sharpshooter Infantry"],
+        ["🏅", "Medal of Activity", "Luna Sharpshooter Infantry"],
+        ["🏅", "Long Service Medal", "Luna Sharpshooter Infantry"],
+        ["🏅", "Loyalty Award", "Luna Sharpshooter Infantry"],
+        ["📜", "Commandant's List", "Philippines Military Academy"],
+        ["📜", "Academic Plaque", "Philippines Military Academy"],
+        ["📜", "Association of Generals and Flag Officers", "Philippines Military Academy"]
+      ];
+
+      function renderAll() {
+        document.getElementById("brandName").textContent = profileData.name;
+        document.getElementById("heroTitle").textContent = profileData.name;
+        document.getElementById("profileName").textContent = profileData.name;
+        document.getElementById("footerName").textContent = profileData.name;
+        document.getElementById("heroDesc").textContent = profileData.title;
+        document.getElementById("pillCountry").textContent = profileData.country;
+        document.getElementById("miniCountry").textContent = profileData.country;
+        document.getElementById("pillAge").textContent = "Age " + profileData.age;
+        document.getElementById("miniAge").textContent = profileData.age;
+        document.getElementById("quoteBox").textContent = profileData.quote;
+
+        const skillGrid = document.getElementById("skillGrid");
+        skillGrid.innerHTML = "";
+        skills.forEach((s) => {
+          const e = document.createElement("article");
+          e.className = "tile";
+          e.innerHTML = `
+            <div class="tile-top">
+              <span class="tile-icon">${s[3]}</span>
+              <span class="arrow">↗</span>
+            </div>
+            <h3>${s[0]}</h3>
+            <p>${s[1]}</p>
+          `;
+          e.onclick = () => openModal("SKILL & CAPABILITY", s[0], s[1], `<b>Proficiency: ${s[2]}%</b><div class="progress"><i style="width:${s[2]}%"></i></div>`);
+          skillGrid.appendChild(e);
+        });
+
+        const projectGrid = document.getElementById("projectGrid");
+        projectGrid.innerHTML = "";
+        projects.forEach((p) => {
+          const e = document.createElement("article");
+          e.className = "work";
+          e.innerHTML = `
+            <div class="work-label">${p[0]}</div>
+            <h3>${p[1]}</h3>
+            <p>${p[2]}</p>
+            <span class="date">${p[3]}</span>
+          `;
+          e.onclick = () => openModal("PROJECT", p[1], p[2], `<b>Focus</b><br>${p[3]}`);
+          projectGrid.appendChild(e);
+        });
+
+        const experienceGrid = document.getElementById("experienceGrid");
+        experienceGrid.innerHTML = "";
+        experience.forEach((x) => {
+          const e = document.createElement("article");
+          e.className = "work";
+          e.innerHTML = `
+            <div class="work-label">${x[0]}</div>
+            <h3>${x[1]}</h3>
+            <p>${x[2]}</p>
+            <span class="date">OPEN RECORD ↗</span>
+          `;
+          e.onclick = () => openModal("SERVICE EXPERIENCE", x[1], x[2], `<b>Record period</b><br>${x[0]}`);
+          experienceGrid.appendChild(e);
+        });
+
+        const awardGrid = document.getElementById("awardGrid");
+        awardGrid.innerHTML = "";
+        awards.forEach((a) => {
+          const e = document.createElement("article");
+          e.className = "tile award";
+          e.innerHTML = `
+            <div class="medal">${a[0]}</div>
+            <h3>${a[1]}</h3>
+            <p>${a[2]}</p>
+          `;
+          e.onclick = () => openModal("AWARD & MILESTONE", a[1], `Recognition received through ${a[2]}.`, "<b>Category</b><br>Service, academy or achievement recognition");
+          awardGrid.appendChild(e);
+        });
+      }
+
+      function openModal(tag, title, text, extra) {
+        document.getElementById("mTag").textContent = tag;
+        document.getElementById("mTitle").textContent = title;
+        document.getElementById("mText").textContent = text;
+        document.getElementById("mExtra").innerHTML = extra;
+        document.getElementById("modal").classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        document.getElementById("modal").classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      document.getElementById("close").onclick = closeModal;
+      document.getElementById("backdrop").onclick = closeModal;
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
+
+      document.querySelectorAll(".photo").forEach((p) => {
+        p.onclick = () => openModal("GALLERY", p.dataset.title, p.dataset.text, "<b>Gallery slot</b><br>Replace this placeholder with your own image when you are ready.");
+      });
+
+      document.getElementById("theme").onclick = () => {
+        document.body.classList.toggle("dark");
+        document.getElementById("theme").textContent = document.body.classList.contains("dark") ? "☀" : "☾";
+        localStorage.setItem("kian-theme", document.body.classList.contains("dark") ? "dark" : "light");
+      };
+
+      if (localStorage.getItem("kian-theme") === "dark") {
+        document.body.classList.add("dark");
+        document.getElementById("theme").textContent = "☀";
+      }
+
+      document.getElementById("adminBtn").onclick = () => {
+        const pass = prompt("Enter Admin Password:");
+        if (pass === ADMIN_PASSWORD) {
+          showAdminPanel("profile");
+        } else if (pass !== null) {
+          alert("Incorrect password! Access denied.");
+        }
+      };
+
+      function showAdminPanel(tab) {
+        let content = `
+          <div class="admin-tabs">
+            <button class="admin-tab ${tab === "profile" ? "active" : ""}" onclick="showAdminPanel('profile')">Profile</button>
+            <button class="admin-tab ${tab === "skills" ? "active" : ""}" onclick="showAdminPanel('skills')">Skills</button>
+            <button class="admin-tab ${tab === "projects" ? "active" : ""}" onclick="showAdminPanel('projects')">Projects</button>
+            <button class="admin-tab ${tab === "experience" ? "active" : ""}" onclick="showAdminPanel('experience')">Experience</button>
+            <button class="admin-tab ${tab === "awards" ? "active" : ""}" onclick="showAdminPanel('awards')">Awards</button>
+          </div>
+        `;
+
+        if (tab === "profile") {
+          content += `
+            <form class="admin-form" onsubmit="saveProfile(event)">
+              <label>Name / Display Title</label>
+              <input type="text" id="admName" value="${profileData.name}" required>
+              <label>Sub-Headline / Role</label>
+              <input type="text" id="admTitle" value="${profileData.title}" required>
+              <label>Country</label>
+              <input type="text" id="admCountry" value="${profileData.country}" required>
+              <label>Age</label>
+              <input type="text" id="admAge" value="${profileData.age}" required>
+              <label>Quote</label>
+              <textarea id="admQuote" rows="2" required>${profileData.quote}</textarea>
+              <button type="submit">Save Profile Changes</button>
+            </form>
+          `;
+        } else if (tab === "skills") {
+          content += `<div class="item-list-edit">`;
+          skills.forEach((s, i) => {
+            content += `<div class="item-row"><span><b>${s[0]}</b> (${s[2]}%)</span><button class="del-btn" onclick="deleteItem('skills',${i})">Delete</button></div>`;
+          });
+          content += `</div><form class="admin-form" onsubmit="addSkill(event)">
+            <label>Add New Skill</label>
+            <input type="text" id="sTitle" placeholder="Skill Name" required>
+            <input type="text" id="sDesc" placeholder="Description" required>
+            <input type="number" id="sProf" placeholder="Proficiency % (e.g. 90)" required>
+            <button type="submit">Add Skill</button>
+          </form>`;
+        } else if (tab === "projects") {
+          content += `<div class="item-list-edit">`;
+          projects.forEach((p, i) => {
+            content += `<div class="item-row"><span><b>${p[1]}</b></span><button class="del-btn" onclick="deleteItem('projects',${i})">Delete</button></div>`;
+          });
+          content += `</div><form class="admin-form" onsubmit="addProject(event)">
+            <label>Add New Project</label>
+            <input type="text" id="pCategory" placeholder="Category (e.g. Roblox Development)" required>
+            <input type="text" id="pTitle" placeholder="Project Title" required>
+            <input type="text" id="pDesc" placeholder="Description" required>
+            <input type="text" id="pTags" placeholder="Tags / Details" required>
+            <button type="submit">Add Project</button>
+          </form>`;
+        } else if (tab === "experience") {
+          content += `<div class="item-list-edit">`;
+          experience.forEach((x, i) => {
+            content += `<div class="item-row"><span><b>${x[1]}</b></span><button class="del-btn" onclick="deleteItem('experience',${i})">Delete</button></div>`;
+          });
+          content += `</div><form class="admin-form" onsubmit="addExperience(event)">
+            <label>Add New Experience</label>
+            <input type="text" id="xDate" placeholder="Date / Period (e.g. MAY 2024 - PRESENT)" required>
+            <input type="text" id="xTitle" placeholder="Organization / Title" required>
+            <textarea id="xDesc" placeholder="Role Description & Details" rows="2" required></textarea>
+            <button type="submit">Add Experience</button>
+          </form>`;
+        } else if (tab === "awards") {
+          content += `<div class="item-list-edit">`;
+          awards.forEach((a, i) => {
+            content += `<div class="item-row"><span>${a[0]} <b>${a[1]}</b></span><button class="del-btn" onclick="deleteItem('awards',${i})">Delete</button></div>`;
+          });
+          content += `</div><form class="admin-form" onsubmit="addAward(event)">
+            <label>Add New Award</label>
+            <input type="text" id="aIcon" placeholder="Icon / Emoji (e.g. 🏅)" required>
+            <input type="text" id="aTitle" placeholder="Award Name" required>
+            <input type="text" id="aOrg" placeholder="Organization / Issuer" required>
+            <button type="submit">Add Award</button>
+          </form>`;
+        }
+
+        openModal("ADMIN CONTROL PANEL", "Website Settings & Content Manager", "Manage your live website content directly from this panel.", content);
+      }
+
+      async function saveProfile(e) {
+        e.preventDefault();
+        profileData.name = document.getElementById("admName").value;
+        profileData.title = document.getElementById("admTitle").value;
+        profileData.country = document.getElementById("admCountry").value;
+        profileData.age = document.getElementById("admAge").value;
+        profileData.quote = document.getElementById("admQuote").value;
+        await persistData();
+        renderAll();
+        alert("Profile updated successfully!");
+        closeModal();
+      }
+
+      async function deleteItem(type, idx) {
+        if (confirm("Are you sure you want to delete this item?")) {
+          if (type === "skills") skills.splice(idx, 1);
+          if (type === "projects") projects.splice(idx, 1);
+          if (type === "experience") experience.splice(idx, 1);
+          if (type === "awards") awards.splice(idx, 1);
+          await persistData();
+          renderAll();
+          showAdminPanel(type);
+        }
+      }
+
+      async function addSkill(e) {
+        e.preventDefault();
+        skills.push([document.getElementById("sTitle").value, document.getElementById("sDesc").value, parseInt(document.getElementById("sProf").value), "★"]);
+        await persistData();
+        renderAll();
+        showAdminPanel("skills");
+      }
+
+      async function addProject(e) {
+        e.preventDefault();
+        projects.push([document.getElementById("pCategory").value, document.getElementById("pTitle").value, document.getElementById("pDesc").value, document.getElementById("pTags").value]);
+        await persistData();
+        renderAll();
+        showAdminPanel("projects");
+      }
+
+      async function addExperience(e) {
+        e.preventDefault();
+        experience.push([document.getElementById("xDate").value, document.getElementById("xTitle").value, document.getElementById("xDesc").value]);
+        await persistData();
+        renderAll();
+        showAdminPanel("experience");
+      }
+
+      async function addAward(e) {
+        e.preventDefault();
+        awards.push([document.getElementById("aIcon").value, document.getElementById("aTitle").value, document.getElementById("aOrg").value]);
+        await persistData();
+        renderAll();
+        showAdminPanel("awards");
+      }
+
+      loadSavedData().then(() => renderAll());
+    </script>
+  </body>
+</html>
